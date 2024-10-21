@@ -1,16 +1,49 @@
 #include <iostream>
-#include <fstream>
-#include <sstream>
 using namespace std;
+
+// Stack using array
+class stack{
+    int *arr;
+    int top;
+    int capacity;
+
+public:
+    stack(int size)
+    {
+        arr = new int[size];
+        top = -1;
+        capacity = size;
+    }
+
+    void push(int element)
+    {
+        if (top == capacity - 1)
+        {
+            cout << "Stack is full" << endl;
+            return;
+        }
+        top++;
+        arr[top] = element;
+    }
+};
+
+
+#include <iostream>
+using namespace std;
+
+class Stack{
+    int* arr;
+    int currSize;
+    int capacity;
+public:
+    Stack(int size){
+        arr = new int[size];
+        currSize = 0;
+        capacity = size;
+    }
+
+}
 
 int main(){
 
-    int arr[10] = {1,2,3,4,5,6,7,8,9};
-    ofstream outfile;
-    outfile.open("output.txt");
-    for (int i=0; i<10; i++){
-        outfile << arr[i] << " ";
-    }
-    outfile.close();
 }
-

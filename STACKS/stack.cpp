@@ -35,14 +35,34 @@ class Stack{
     int* arr;
     int currSize;
     int capacity;
+    int top;
 public:
     Stack(int size){
         arr = new int[size];
         currSize = 0;
         capacity = size;
+        top = -1;
     }
 
-}
+    void push(int val){
+        if (top = capacity -1 ){
+            cout << "Stack is full" << endl;
+        }
+    }
+
+    void pop(){
+
+    }
+
+    int top(){
+
+    }
+
+    bool isEmpty(){
+
+    }
+
+};
 
 int main(){
 
